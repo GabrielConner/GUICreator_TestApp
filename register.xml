@@ -1,0 +1,114 @@
+<body primaryColor="0.8,0.8,0.8,1.0" secondaryColor="0.3,0.3,0.3,1.0" gridX="2" gridY="2" gridX1Size="3"
+gridY0Size="2" gradientX="true" gradientY="true" gradientDistance="1.75" gradientStart="0.9,0.9">
+
+  <space primaryColor="0.6,0.6,0.6,1.0" border="true" borderThickness="0.02" gridX="1" gridY="3" gridY1Size="3">
+    <text>
+      Taco Truck
+    </text>
+
+    <button primaryColor="0.45,0.3,0.3,1.0" scaleX="0.8" scaleY="0.30" padding="0,-0.01" border="true" borderThickness="0.02"
+    onEnter="darken" onLeave="reset" onClick="darken" onRelease="clear" textSize="0.6">
+      Clear Cart
+    </button>
+
+
+
+    <button primaryColor="0.5,0.5,0.5,1.0" padding="0.1,0" scaleX="0.8" scaleY="0.90" textSize="0.6" border="true" borderThickness="0.02"
+    onEnter="darken" onLeave="reset" onClick="darken" onRelease="displayReceipts">
+      View Receipt History
+    </button>
+
+  </space>
+
+  <text id="cart" centerTextX="false" centerTextY="false" padding="0.05,0">
+  </text>
+
+
+  <space primaryColor="0.5,0.5,0.4,1.0" secondaryColor="0.5,0.5,0.5,1.0" scaleX="4" offsetX="0.75" gridX="4" gridY="1" gridX3Size="2" padding="0.05,0.1"
+  border="true" borderThickness="0.02" gradientX="true" gradientY="true" manhattanGradient="true" gradientDistance="2" gradientStep="0.3">
+
+    <item id="1" primaryColor="0.5,0.2,0.2,1.0" scaleX="0.9" scaleY="0.5" textSize="0.7" onEnter="darken" onLeave="reset" onClick="darken" onRelease="add"
+    border="true" borderThickness="0.02">
+
+      Cheese Taco
+      ($1.09)
+    </item>
+
+    <item id="2" primaryColor="0.2,0.5,0.2,1.0" scaleX="0.9" scaleY="0.5" textSize="0.7" onEnter="darken" onLeave="reset" onClick="darken" onRelease="add" 
+    border="true" borderThickness="0.02">
+
+      Bean Taco
+      ($0.99)
+    </item>
+
+    <item id="3" primaryColor="0.2,0.2,0.5,1.0" scaleX="0.9" scaleY="0.5" textSize="0.7" onEnter="darken" onLeave="reset" onClick="darken" onRelease="add"
+    border="true" borderThickness="0.02">
+
+      Taco
+      ($1.99)
+    </item>
+
+    <button id="confirm" primaryColor="0,0.1,0,1.0" scaleX="0.85" scaleY="0.75" onEnter="darken" onLeave="reset" onClick="darken" onRelease="confirm" centerTextX="false"
+    border="true" borderThickness="0.02" padding="0.1, 0">
+
+      Confirm \ \ (empty)
+    </button>
+  </space>
+
+
+
+  <space id="cashCard" primaryColor="0.7,0.7,0.7,1.0" noGrid="true" scaleX="0.3" scaleY="0.15" offsetY="0.3" gridY="2" enabled="false" gridX0Size="2" gridX1Size="2" gridY1Size="2">
+    <button primaryColor="0.9,0,0,1.0" jumpGridX="2" textSize="0.8" onEnter="darken" onLeave="reset" onClick="darken" onRelease="cancel" border="true" borderThickness="0.02">
+      X
+    </button>
+
+    <button id="cash" primaryColor="0.6,0.7,0.6,1.0" scaleX="0.8" onEnter="darken" onLeave="reset" onClick="darken" onRelease="cash" border="true" borderThickness="0.02">
+      Cash
+    </button>
+    <button id="card" primaryColor="0.7,0.6,0.6,1.0" scaleX="0.8" onEnter="darken" onLeave="reset" onRelease="card" border="true" borderThickness="0.02">
+      Card
+    </button>
+
+  </space>
+
+
+  <space id="cardAsk" primaryColor="0.7,0.7,0.7,1.0" noGrid="true" scaleX="0.4" scaleY="0.3" offsetY="0.3" gridX="2" gridY="2" enabled="false" border="true" borderThickness="0.02">
+    <text id="cardWarn" textSize="0.6" scaleX="2" noMove="true" offsetX="0.5">
+    </text>
+
+    <button primaryColor="0.6,0.7,0.6,1.0" onEnter="darken" scaleX="0.8" onLeave="reset" onClick="darken" onRelease="yes" jumpGridY="1" border="true" borderThickness="0.02">
+      Yes
+    </button>
+    <button primaryColor="0.7,0.6,0.6,1.0" onEnter="darken" scaleX="0.8" onLeave="reset" onClick="darken" onRelease="no" border="true" borderThickness="0.02">
+      No
+    </button>
+  </space>
+
+
+
+  <space id="receipt" primaryColor="0.7,0.7,0.7,1.0" secondaryColor="0.8,0.8,0.8,1.0" noGrid="true" scaleX="0.6" scaleY="0.666667" offsetX="0.33333" offsetY="0.333333" gridX="3"
+  gridY="3" enabled="false" gridX1Size="8" gridY2Size="2" gridY1Size="11" gradientY="true" gradientStart="0,1.0" gradientStep="0.1428571428571428"
+  gradientDistance="0.1428571428571428" border="true" borderThickness="0.02" borderColor="0,0,0,1.0" onClick="startGrab" onHold="grab" onRelease="release">
+    
+    <button jumpGridX="2" primaryColor="0.9,0.0,0.0,1.0" onEnter="darken" onLeave="reset" onClick="darken" onRelease="closeReceipt" padding="0,-0.25" border="true" borderThickness="0.02">
+      X
+    </button>
+
+    <text id="receiptText" primaryColor="0.6,0.6,0.6,1.0" noMove="true" jumpGridX="1" centerTextX="false" centerTextY="false" padding="0.1, 0.1">
+      
+    </text>
+
+    <button jumpGridY="1" jumpGridX="-1" primaryColor="0.5,0.5,0.5,1.0" onEnter="darken" onLeave="reset" onClick="darken" onRelease="leftReceipt" border="true" borderThickness="0.02">
+      &lt;&lt;
+    </button>
+
+    <text id="receiptNumber" primaryColor="0.65,0.6,0.6,1.0">
+      0 / 10
+    </text>
+
+    <button primaryColor="0.5,0.5,0.5,1.0" onEnter="darken" onLeave="reset" onClick="darken" onRelease="rightReceipt" border="true" borderThickness="0.02">
+      &gt;&gt;
+    </button>
+  </space>
+
+</body>
