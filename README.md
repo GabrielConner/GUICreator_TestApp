@@ -88,6 +88,7 @@ Functions are set with a space ( *namespace* ) and function pointer.  Pages will
 | string | onRelease | Location of function for an onRelease callback |
 | string | onEnter | Location of function for an onEnter callback |
 | string | onLeave | Location of function for an onLeave callback |
+| string | onHold | Location of function for an onHold callback |
 
 
 ### **Packages used**
